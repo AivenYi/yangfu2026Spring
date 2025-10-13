@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>扬赋人工智能协会 - 招新页面</title>
+    <title>扬赋人工智能协会 - 综合招新页面</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,10 +16,10 @@
             <nav>
                 <ul>
                     <li><a href="#intro">协会简介</a></li>
-                    <li><a href="features.html">协会特色</a></li>
-                    <li><a href="gallery.html">活动展示</a></li>
-                    <li><a href="enterprise-cooperation.html">校企合作</a></li>
-                    <li><a href="contact.html">联系方式</a></li>
+                    <li><a href="#features">协会特色</a></li>
+                    <li><a href="#gallery">活动展示</a></li>
+                    <li><a href="#enterprise-cooperation">校企合作</a></li>
+                    <li><a href="#contact">联系方式</a></li>
                 </ul>
             </nav>
         </div>
@@ -107,13 +107,386 @@
                     
                     <!-- 了解协会特色按钮居中放在底部 -->
                     <div class="button-container">
-                        <a href="features.html" class="btn btn-primary">了解协会特色</a>
+                        <a href="#features" class="btn btn-primary">了解协会特色</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 其他部分可以后续添加 -->
+        <!-- 协会特色部分 -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>协会特色</h2>
+                <div class="features-content">
+                    <p>扬赋人工智能协会致力于为成员提供全方位的人工智能学习和实践平台，以下是我们的核心特色：</p>
+                    
+                    <div class="features-grid">
+                        <!-- 特色项目1：AI学习资料 -->
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <span class="icon-emoji">📚</span>
+                            </div>
+                            <h3>AI学习资料</h3>
+                            <p>我们提供<span class="highlight-text">海量AI学习资源</span>，包括最新技术论文、实战教程、开源项目等，帮助成员<span class="color-text-blue">快速掌握前沿技术</span>，建立完整的知识体系。</p>
+                            <div class="feature-details">
+                                <span class="detail-tag">📖 技术文档</span>
+                                <span class="detail-tag">🎥 视频教程</span>
+                                <span class="detail-tag">💻 代码资源</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色项目2：活动学分 -->
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <span class="icon-emoji">🎓</span>
+                            </div>
+                            <h3>活动学分</h3>
+                            <p>参与协会活动可获得<span class="highlight-text">正规学分认定</span>，包括创新创业学分、社会实践学分等，让学习与实践<span class="color-text-green">完美结合</span>，助力学业发展。</p>
+                            <div class="feature-details">
+                                <span class="detail-tag">🏆 竞赛学分</span>
+                                <span class="detail-tag">💡 创新学分</span>
+                                <span class="detail-tag">🤝 实践学分</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色项目3：大厂实习机会 -->
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <span class="icon-emoji">🏢</span>
+                            </div>
+                            <h3>大厂实习机会</h3>
+                            <p>与<span class="highlight-text">知名企业深度合作</span>，为优秀成员提供<span class="color-text-orange">大厂实习机会</span>，包括字节跳动、腾讯、阿里巴巴等，积累宝贵工作经验。</p>
+                            <div class="feature-details">
+                                <span class="detail-tag">🚀 AI不神秘</span>
+                                <span class="detail-tag">🐧 通往AGI之路</span>
+                                <span class="detail-tag">🛒 阿里巴巴</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色项目4：职业技能证书 -->
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <span class="icon-emoji">🏅</span>
+                            </div>
+                            <h3>职业技能证书</h3>
+                            <p>提供<span class="highlight-text">权威技能认证</span>，包括提示词工程师、AI Agent工程师等专业证书，提升<span class="color-text-purple">就业竞争力</span>，为职业发展奠定坚实基础。</p>
+                            <div class="feature-details">
+                                <span class="detail-tag">🤖 提示词工程</span>
+                                <span class="detail-tag">📊 Agent</span>
+                                <span class="detail-tag">☁️ AIGC专家证</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 活动展示部分 -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <h2>活动展示 - 流动照片墙</h2>
+                <div class="gallery-intro">
+                    <p>这里展示了协会举办的各类精彩活动照片，记录了我们共同成长的美好瞬间。滚动浏览，感受协会的活力与氛围！</p>
+                </div>
+                
+                <!-- 流动照片墙容器 -->
+                <div class="photo-gallery" id="photoGallery">
+                    <!-- 照片将通过JavaScript动态生成 -->
+                    <div class="loading-message">照片加载中...</div>
+                </div>
+                
+                <script>
+                    // 所有照片文件列表
+                    const photoFiles = [
+                        '成就 (1).png',
+                        '成就 (2).png',
+                        '成就 (3).png',
+                        '成就 (4).png',
+                        '成就 (5).png',
+                        '成就 (6).png',
+                        '成就 (7).png',
+                        '成就 (8).png',
+                        '成就 (9).png',
+                        '成就 (10).png',
+                        '成就 (11).png',
+                        '成就 (12).png',
+                        '成就 (13).png',
+                        '成就 (14).png'
+                    ];
+                    
+                    // 活动照片标题列表 - 对应每张成就图片
+                    const photoCaptions = [
+                        '协会成立仪式', 'AI技术研讨会', '编程竞赛获奖', '项目成果展示', '会员技术分享',
+                        '专家讲座现场', '团队协作项目', '学术交流活动', '技术培训课程', '招新宣传活动',
+                        '会员团建活动', '行业专家指导', '创新项目展示', '协会年度总结'
+                    ];
+                    
+                    // 生成照片墙
+                    function generatePhotoGallery() {
+                        const galleryContainer = document.getElementById('photoGallery');
+                        galleryContainer.innerHTML = ''; // 清空容器
+                        
+                        // 按顺序显示图片
+                        photoFiles.forEach((photoFile, index) => {
+                            const photoItem = document.createElement('div');
+                            photoItem.className = 'photo-item';
+                            photoItem.style.opacity = '0';
+                            photoItem.style.transform = 'translateY(60px)';
+                            photoItem.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                            
+                            const img = document.createElement('img');
+                            img.src = `photo/${photoFile}`;
+                            img.alt = `协会成就展示 - ${photoCaptions[index] || '活动照片'}`;
+                            img.className = 'photo-img';
+                            
+                            const caption = document.createElement('p');
+                            caption.className = 'photo-caption';
+                            caption.textContent = photoCaptions[index] || '协会活动';
+                            
+                            photoItem.appendChild(img);
+                            photoItem.appendChild(caption);
+                            galleryContainer.appendChild(photoItem);
+                            
+                            // 图片加载后显示
+                            img.onload = function() {
+                                setTimeout(() => {
+                                    photoItem.style.opacity = '1';
+                                    photoItem.style.transform = 'translateY(0)';
+                                }, 100);
+                            };
+                            
+                            // 图片加载失败时的处理
+                            img.onerror = function() {
+                                console.log(`无法加载图片: ${photoFile}`);
+                                photoItem.style.display = 'none';
+                            };
+                        });
+                    }
+                    
+                    // 页面加载完成后生成照片墙
+                    document.addEventListener('DOMContentLoaded', generatePhotoGallery);
+                </script>
+            </div>
+        </section>
+
+        <!-- 校企合作部分 -->
+        <section id="enterprise-cooperation" class="recruitment-section">
+            <div class="container">
+                <h2>校企合作</h2>
+                <div class="recruitment-content">
+                    <h3>携手企业，共创未来</h3>
+                    <p>扬赋人工智能协会致力于搭建学校与企业之间的桥梁，通过深度的校企合作，为学生提供实践平台，为企业输送优秀人才，共同推动人工智能技术的创新与发展。</p>
+                    
+                    <h3 style="margin-top: 30px; color: #4a90e2;">合作模式</h3>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li><strong>实习基地建设：</strong>与知名AI企业建立长期实习基地，为学生提供真实项目实践机会</li>
+                        <li><strong>技术培训合作：</strong>邀请企业技术专家来校开展专题讲座和技术培训</li>
+                        <li><strong>项目联合开发：</strong>与企业共同开展AI技术研发项目，实现产学研结合</li>
+                        <li><strong>人才定向培养：</strong>根据企业需求定制人才培养方案，实现精准对接</li>
+                        <li><strong>竞赛合作支持：</strong>企业提供技术支持和奖金赞助，共同举办AI竞赛</li>
+                    </ul>
+                    
+                    <h3 style="margin-top: 30px; color: #4a90e2;">合作企业</h3>
+                    <p>我们已与多家知名企业建立了良好的合作关系，以下是我们的主要合作伙伴：</p>
+                    
+                    <!-- 企业Logo展示区域 -->
+                    <div class="enterprise-logos">
+                        <div class="logo-grid">
+                            <div class="enterprise-logo">
+                                <img src="photo/Logo/AI不神秘logo.png" alt="AI不神秘" class="logo-image"/>
+                                <p class="logo-caption">AI不神秘</p>
+                            </div>
+                            <div class="enterprise-logo">
+                                <img src="photo/Logo/北京大学.png" alt="北京大学" class="logo-image"/>
+                                <p class="logo-caption">北京大学</p>
+                            </div>
+                            <div class="enterprise-logo">
+                                <img src="photo/Logo/灰底黑色2.svg" alt="灰底黑色" class="logo-image"/>
+                                <p class="logo-caption">WaytoAGI</p>
+                            </div>
+                            <div class="enterprise-logo">
+                                <img src="photo/Logo/爱烛轩科技.png" alt="爱烛轩科技" class="logo-image"/>
+                                <p class="logo-caption">爱烛轩科技</p>
+                            </div>
+                            <div class="enterprise-logo">
+                                <img src="photo/Logo/飞书.jpg" alt="飞书" class="logo-image"/>
+                                <p class="logo-caption">飞书</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <h3 style="margin-top: 30px;">合作成果</h3>
+                        <p>通过多年的校企合作实践，我们取得了丰硕的成果：</p>
+                    </div>
+                    
+                    <!-- 成果展示网格 -->
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">🎓</div>
+                            <div class="achievement-number">50+</div>
+                            <div class="achievement-text">优秀学生实习就业</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">🚀</div>
+                            <div class="achievement-number">10+</div>
+                            <div class="achievement-text">AI技术项目开发</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">🎤</div>
+                            <div class="achievement-number">20+</div>
+                            <div class="achievement-text">企业技术讲座</div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">👥</div>
+                            <div class="achievement-number">1000+</div>
+                            <div class="achievement-text">受益学生人次</div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; color: #4a90e2;">合作优势</h3>
+                    <p>校企合作实现了多方共赢，为各方带来显著价值：</p>
+                    
+                    <!-- 优势展示卡片 -->
+                    <div class="advantages-cards">
+                        <div class="advantage-card student-card">
+                            <div class="card-icon">🎓</div>
+                            <h4>对学生</h4>
+                            <ul>
+                                <li>获得真实项目经验</li>
+                                <li>提升就业竞争力</li>
+                                <li>拓宽职业发展道路</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card enterprise-card">
+                            <div class="card-icon">🏢</div>
+                            <h4>对企业</h4>
+                            <ul>
+                                <li>获得优秀人才储备</li>
+                                <li>降低招聘成本</li>
+                                <li>提升企业影响力</li>
+                            </ul>
+                        </div>
+                        <div class="advantage-card school-card">
+                            <div class="card-icon">🏫</div>
+                            <h4>对学校</h4>
+                            <ul>
+                                <li>提升教学质量</li>
+                                <li>增强社会影响力</li>
+                                <li>促进学科建设</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px; color: #4a90e2;">合作流程</h3>
+                    <p>我们建立了标准化的校企合作流程，确保合作项目的顺利实施：</p>
+                    
+                    <!-- 流程步骤展示 -->
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>初步洽谈</h4>
+                                <p>双方就合作意向进行初步沟通</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>需求调研</h4>
+                                <p>深入了解企业需求和学生能力</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>方案制定</h4>
+                                <p>制定详细的合作方案和实施计划</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>协议签署</h4>
+                                <p>正式签署校企合作协议</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>项目实施</h4>
+                                <p>按照协议内容开展具体合作项目</p>
+                            </div>
+                        </div>
+                        <div class="process-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">
+                                <h4>效果评估</h4>
+                                <p>定期评估合作效果，持续优化改进</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-container">
+                        <a href="#contact" class="btn btn-primary">查看联系方式</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系方式部分 -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>联系方式</h2>
+                
+                <!-- 微信联系方式二维码 -->
+                <div class="wechat-section">
+                    <h3>微信联系方式</h3>
+                    <div class="wechat-codes">
+                        <div class="wechat-code">
+                            <img src="微信二维码1.jpg" alt="微信二维码1" class="wechat-qr"/>
+                            <p>微信联系方式1</p>
+                        </div>
+                        <div class="wechat-code">
+                            <img src="微信二维码2.jpg" alt="微信二维码2" class="wechat-qr"/>
+                            <p>微信联系方式2</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 其他联系方式 -->
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <span class="contact-icon">📱</span>
+                            <h4>微信公众号</h4>
+                        </div>
+                        <p>扬赋人工智能协会</p>
+                        <div class="qr-container">
+                            <img src="公众号二维码.jpg" alt="微信公众号二维码" class="qr-image"/>
+                            <p>扫码关注微信公众号</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <span class="contact-icon">📧</span>
+                            <h4>邮箱</h4>
+                        </div>
+                        <p>官方邮箱：290444739@qq.com</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <span class="contact-icon">📍</span>
+                            <h4>线下咨询点</h4>
+                        </div>
+                        <p>二食堂迎新点</p>
+                        <p>咨询时间：9月9日-9月20日 17:30-20:30</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -123,5 +496,434 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- 自动滚动功能 -->
+    <script>
+        // 自动滚动功能
+        let autoScrollInterval;
+        let isAutoScrolling = true;
+        let speedMultiplier = 2; // 速度倍数，默认2倍
+        const baseSpeedPerSecond = 31; // 基础速度：31px/秒（1倍速）
+        const scrollInterval = 10; // 更频繁的更新，每10ms执行一次
+        let isReturningToTop = false; // 标记是否正在返回顶部
+        let scrollToTopTimeout; // 返回顶部的超时定时器
+        
+        // 开始自动滚动
+        function startAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+            }
+            
+            autoScrollInterval = setInterval(() => {
+                if (isAutoScrolling && !isReturningToTop) {
+                    // 使用平方关系：实际速度 = 基础速度 * 倍数²
+                    // 每秒速度 = 31px * 倍数²，转换为每10ms的速度
+                    const speedPerSecond = baseSpeedPerSecond * Math.pow(speedMultiplier, 2);
+                    const actualScrollSpeed = speedPerSecond * (scrollInterval / 1000);
+                    
+                    // 使用更精确的滚动距离计算
+                    const scrollDistance = Math.max(0.1, actualScrollSpeed);
+                    window.scrollBy(0, scrollDistance);
+                    
+                    // 检查是否到达页面底部
+                    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50) {
+                        // 到达底部时回到顶部继续滚动
+                        isReturningToTop = true;
+                        
+                        // 清除之前的超时定时器
+                        if (scrollToTopTimeout) {
+                            clearTimeout(scrollToTopTimeout);
+                        }
+                        
+                        // 平滑滚动到顶部
+                        console.log('🔄 到达页面底部，开始返回顶部循环...');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        
+                        // 监听滚动事件，当到达顶部时恢复自动滚动
+                        const checkScrollPosition = () => {
+                            if (window.scrollY <= 10) { // 接近顶部时
+                                isReturningToTop = false;
+                                console.log('✅ 已返回顶部，继续自动滚动循环');
+                                window.removeEventListener('scroll', checkScrollPosition);
+                            }
+                        };
+                        
+                        // 添加滚动监听器
+                        window.addEventListener('scroll', checkScrollPosition);
+                        
+                        // 备用超时机制，确保不会卡住
+                        scrollToTopTimeout = setTimeout(() => {
+                            isReturningToTop = false;
+                            window.removeEventListener('scroll', checkScrollPosition);
+                        }, 2000); // 2秒后强制恢复
+                    }
+                }
+            }, scrollInterval);
+        }
+        
+        // 停止自动滚动
+        function stopAutoScroll() {
+            isAutoScrolling = false;
+            isReturningToTop = false; // 重置返回顶部状态
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+            if (scrollToTopTimeout) {
+                clearTimeout(scrollToTopTimeout);
+                scrollToTopTimeout = null;
+            }
+        }
+        
+        // 恢复自动滚动
+        function resumeAutoScroll() {
+            isAutoScrolling = true;
+            if (!autoScrollInterval) {
+                startAutoScroll();
+            }
+        }
+        
+        // 页面加载完成后开始自动滚动
+        document.addEventListener('DOMContentLoaded', function() {
+            // 延迟1秒开始自动滚动
+            setTimeout(() => {
+                startAutoScroll();
+            }, 1000);
+        });
+        
+        // 添加滚动控制按钮（可选）
+        function createScrollControls() {
+            const controls = document.createElement('div');
+            controls.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1001;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            `;
+            
+            const playBtn = document.createElement('button');
+            playBtn.innerHTML = '▶️';
+            playBtn.title = '开始自动滚动';
+            playBtn.style.cssText = `
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                background: #4a90e2;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+            `;
+            playBtn.onclick = () => {
+                if (isAutoScrolling) {
+                    stopAutoScroll();
+                    playBtn.innerHTML = '▶️';
+                    playBtn.title = '开始自动滚动';
+                    playBtn.style.background = '#e74c3c';
+                } else {
+                    resumeAutoScroll();
+                    playBtn.innerHTML = '⏸️';
+                    playBtn.title = '暂停自动滚动';
+                    playBtn.style.background = '#4a90e2';
+                }
+            };
+            
+            const topBtn = document.createElement('button');
+            topBtn.innerHTML = '⬆️';
+            topBtn.title = '回到顶部';
+            topBtn.style.cssText = `
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50%;
+                background: #27ae60;
+                color: white;
+                font-size: 20px;
+                cursor: pointer;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                transition: all 0.3s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+            `;
+            topBtn.onclick = () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // 回到顶部后自动恢复滚动
+                setTimeout(() => {
+                    if (!isAutoScrolling) {
+                        resumeAutoScroll();
+                    }
+                }, 1000);
+            };
+            
+            controls.appendChild(playBtn);
+            controls.appendChild(topBtn);
+            document.body.appendChild(controls);
+        }
+        
+        // 创建速度调节器
+        function createSpeedController() {
+            const speedController = document.createElement('div');
+            speedController.id = 'speedController';
+            speedController.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1001;
+                background: rgba(255, 255, 255, 0.8);
+                border-radius: 8px;
+                padding: 8px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(74, 144, 226, 0.1);
+                width: 160px;
+                opacity: 0.7;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                overflow: visible;
+                transform-origin: right center;
+            `;
+            
+            // 收缩/展开按钮
+            const toggleBtn = document.createElement('button');
+            toggleBtn.innerHTML = '◀';
+            toggleBtn.title = '收缩/展开速度调节器';
+            toggleBtn.style.cssText = `
+                position: absolute;
+                left: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 25px;
+                height: 50px;
+                border: none;
+                border-radius: 8px 0 0 8px;
+                background: rgba(74, 144, 226, 0.9);
+                color: white;
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                z-index: 1002;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+                font-weight: bold;
+                opacity: 1;
+                pointer-events: auto;
+            `;
+            
+            // 鼠标悬停时显示
+            speedController.addEventListener('mouseenter', function() {
+                this.style.opacity = '1';
+            });
+            
+            speedController.addEventListener('mouseleave', function() {
+                this.style.opacity = '0.7';
+            });
+            
+            // 按钮悬停效果
+            toggleBtn.addEventListener('mouseenter', function() {
+                this.style.background = 'rgba(74, 144, 226, 1)';
+                this.style.transform = 'translateY(-50%) scale(1.1)';
+            });
+            
+            toggleBtn.addEventListener('mouseleave', function() {
+                this.style.background = 'rgba(74, 144, 226, 0.9)';
+                this.style.transform = 'translateY(-50%) scale(1)';
+            });
+            
+            // 收缩/展开功能
+            let isCollapsed = false;
+            toggleBtn.addEventListener('click', function() {
+                isCollapsed = !isCollapsed;
+                const controller = document.getElementById('speedController');
+                const content = controller.querySelector('.speed-content');
+                
+                if (isCollapsed) {
+                    // 收缩状态 - 向右收缩
+                    controller.style.width = '0px';
+                    controller.style.padding = '8px 0';
+                    content.style.display = 'none';
+                    toggleBtn.innerHTML = '◀'; // 收缩时显示向左箭头，表示可以向左展开
+                    toggleBtn.style.left = '-25px';
+                    toggleBtn.style.zIndex = '1003'; // 确保按钮在最上层
+                } else {
+                    // 展开状态 - 向左展开
+                    controller.style.width = '160px';
+                    controller.style.padding = '8px';
+                    content.style.display = 'block';
+                    toggleBtn.innerHTML = '▶'; // 展开时显示向右箭头，表示可以向右收缩
+                    toggleBtn.style.left = '-30px';
+                    toggleBtn.style.zIndex = '1002';
+                }
+            });
+            
+            // 内容容器
+            const content = document.createElement('div');
+            content.className = 'speed-content';
+            content.style.cssText = `
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                opacity: 1;
+                transform: translateX(0);
+            `;
+            
+            // 标题
+            const title = document.createElement('div');
+            title.textContent = '速度';
+            title.style.cssText = `
+                font-size: 11px;
+                font-weight: 500;
+                color: #666;
+                margin-bottom: 5px;
+                text-align: center;
+            `;
+            
+            // 速度显示
+            const speedDisplay = document.createElement('div');
+            speedDisplay.id = 'speedDisplay';
+            speedDisplay.textContent = '2x';
+            speedDisplay.style.cssText = `
+                font-size: 14px;
+                font-weight: bold;
+                color: #4a90e2;
+                text-align: center;
+                margin-bottom: 5px;
+            `;
+            
+            // 速度滑块
+            const speedSlider = document.createElement('input');
+            speedSlider.type = 'range';
+            speedSlider.min = '0.5';
+            speedSlider.max = '100';
+            speedSlider.step = '0.5';
+            speedSlider.value = '2';
+            speedSlider.style.cssText = `
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+                background: #e0e0e0;
+                outline: none;
+                -webkit-appearance: none;
+                margin-bottom: 5px;
+            `;
+            
+            // 自定义滑块样式
+            speedSlider.style.background = `
+                linear-gradient(to right, #4a90e2 0%, #4a90e2 7.7%, #e0e0e0 7.7%, #e0e0e0 100%)
+            `;
+            
+            // 速度按钮组（简化版）
+            const speedButtons = document.createElement('div');
+            speedButtons.style.cssText = `
+                display: flex;
+                gap: 2px;
+                justify-content: center;
+                flex-wrap: wrap;
+            `;
+            
+            const speeds = [0.5, 1, 2, 5, 10, 20, 50, 100];
+            speeds.forEach(speed => {
+                const btn = document.createElement('button');
+                btn.textContent = speed + 'x';
+                btn.style.cssText = `
+                    padding: 1px 3px;
+                    border: 1px solid #4a90e2;
+                    border-radius: 4px;
+                    background: ${speed === 2 ? '#4a90e2' : 'white'};
+                    color: ${speed === 2 ? 'white' : '#4a90e2'};
+                    font-size: 8px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    min-width: 14px;
+                `;
+                
+                btn.onclick = () => {
+                    speedMultiplier = speed;
+                    speedSlider.value = speed;
+                    updateSpeedDisplay();
+                    updateSliderBackground();
+                    updateButtonStyles();
+                    
+                    // 调试信息：显示当前速度计算
+                    const speedPerSecond = baseSpeedPerSecond * Math.pow(speedMultiplier, 2);
+                    const actualScrollSpeed = speedPerSecond * (scrollInterval / 1000);
+                    const scrollDistance = Math.max(0.1, actualScrollSpeed);
+                    console.log(`速度倍数: ${speedMultiplier}x, 每秒速度: ${speedPerSecond.toFixed(2)}px, 每10ms滚动: ${scrollDistance.toFixed(3)}px`);
+                };
+                
+                speedButtons.appendChild(btn);
+            });
+            
+            // 滑块事件监听
+            speedSlider.addEventListener('input', function() {
+                speedMultiplier = parseFloat(this.value);
+                updateSpeedDisplay();
+                updateSliderBackground();
+                updateButtonStyles();
+                
+                // 调试信息：显示当前速度计算
+                const speedPerSecond = baseSpeedPerSecond * Math.pow(speedMultiplier, 2);
+                const actualScrollSpeed = speedPerSecond * (scrollInterval / 1000);
+                const scrollDistance = Math.max(0.1, actualScrollSpeed);
+                console.log(`速度倍数: ${speedMultiplier}x, 每秒速度: ${speedPerSecond.toFixed(2)}px, 每10ms滚动: ${scrollDistance.toFixed(3)}px`);
+            });
+            
+            // 更新速度显示
+            function updateSpeedDisplay() {
+                speedDisplay.textContent = speedMultiplier + 'x';
+            }
+            
+            // 更新滑块背景
+            function updateSliderBackground() {
+                const percentage = ((speedMultiplier - 0.5) / (100 - 0.5)) * 100;
+                speedSlider.style.background = `
+                    linear-gradient(to right, #4a90e2 0%, #4a90e2 ${percentage}%, #e0e0e0 ${percentage}%, #e0e0e0 100%)
+                `;
+            }
+            
+            // 更新按钮样式
+            function updateButtonStyles() {
+                const buttons = speedButtons.querySelectorAll('button');
+                buttons.forEach((btn, index) => {
+                    const speed = speeds[index];
+                    if (speed === speedMultiplier) {
+                        btn.style.background = '#4a90e2';
+                        btn.style.color = 'white';
+                    } else {
+                        btn.style.background = 'white';
+                        btn.style.color = '#4a90e2';
+                    }
+                });
+            }
+            
+            // 将所有内容添加到content容器中
+            content.appendChild(title);
+            content.appendChild(speedDisplay);
+            content.appendChild(speedSlider);
+            content.appendChild(speedButtons);
+            
+            // 将content和toggleBtn添加到speedController中
+            speedController.appendChild(content);
+            speedController.appendChild(toggleBtn);
+            
+            document.body.appendChild(speedController);
+        }
+        
+        // 创建控制按钮
+        document.addEventListener('DOMContentLoaded', function() {
+            createScrollControls();
+            createSpeedController();
+        });
+    </script>
 </body>
 </html>
